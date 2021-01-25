@@ -14,11 +14,12 @@ export class AppComponent {
     {name: 'Cristian', position: 'Developer', email: "cristian@gmail.com"}
   ];
 
-  model:any = {
+  model:any = {};
+  model2:any = {}
 
-  }
 
   addEmployee():void{
+    this.employees.push(this.model);
 
   }
 
@@ -26,11 +27,22 @@ export class AppComponent {
 
   }
 
-  editEmployee():void{
-
+  myValue;
+  editEmployee(i):void{
+    this.model2.name = this.employees[i].name;
+    this.model2.position = this.employees[i].position;
+    this.model2.email = this.employees[i].email;
+    this.myValue = i;
   }
 
   updateEmployee():void{
-
+    let i = this.myValue;
+    for(let j = 0 ; j< this.employees.length; j++){
+      if(i == j){
+        this.employees[i] = this.model2;
+        this.model2 = {};
+      }
+    }
+    console.log(this.model2);
   }
 }
