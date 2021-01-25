@@ -9,9 +9,9 @@ export class AppComponent {
   title = 'Angular Crud Users';
 
   employees = [
-    {name: 'Pablo', position: 'Mnager'},
-    {name: 'Alan', position: 'Designer'},
-    {name: 'Cristian', position: 'Developer'}
+    {name: 'Pablo', position: 'Manager', email: "pablo@gmail.com"},
+    {name: 'Alan', position: 'Designer', email: "alan@gmail.com"},
+    {name: 'Cristian', position: 'Developer', email: "cristian@gmail.com"}
   ];
 
   model:any = {
