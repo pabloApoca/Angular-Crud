@@ -48,6 +48,8 @@ export class AppComponent {
         this.employees[i] = this.model2;
         this.msg = "Empleado Actualizado."
         this.model2 = {};
+        this.hideUpdate = true;
+
       }
     }
     console.log(this.model2);
