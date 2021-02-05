@@ -20,16 +20,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ang-web-users'`, () => {
+  it(`should have as title 'Angular Crud Users'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ang-web-users');
+    expect(app.title).toEqual('Angular Crud Users');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ang-web-users app is running!');
+    const app = fixture.componentInstance;
+    expect(compiled.querySelector('h1').textContent).toContain(app.title);
   });
 });
